@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Politico-Administrator Homepage</title>
+		<link rel="stylesheet" type="text/css" href="script/css/main.css">
+	</head>
+	<body>
+    	
+			<header class="main">
+					<ul>
+						<li><h1>Politico</h1></li>
+						<li class="right"><a href="admin_home.html" class="reduce">Back</a></li>
+					</ul>
+				</header>
+		<div class="body">
+			<main class="half-flex-length flex-length-move-2 down">
+				<h2 class="text-center">Create Party</h2>
+				<hr>
+				<div id="dialogBox"></div>
+				<form>
+					<div class="form_controller">
+						<div class="full-flex-length">
+							<input type="text" class="control" id="name" placeholder="Party name" name="name" required>
+						</div>
+					</div>
+					<div class="form_controller">
+						<div class="full-flex-length">
+							<input type="text" class="control" id="accronym" placeholder="Party Accronym" name="accronym" required>
+						</div>
+					</div>
+					<div class="form_controller">
+						<div class="full-flex-length">
+							<input type="text" class="control" id="slogan" placeholder="Party Slogan" name="slogan" required>
+						</div>
+					</div>
+					<div class="form_controller">
+						<label class="flex-length-2">Party Logo</label>
+						<div class="flex-length-7">
+							<input type="file" class="control" id="passport" name="passport" required>
+						</div>
+					</div>
+
+					<input type="submit" value="Create Party" class="button button_green">
+				</form>
+			</main>
+		</div>
+	</body>
+</html>
