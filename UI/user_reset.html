@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Politico-Reset Password</title>
+	<link rel="stylesheet" type="text/css" href="script/css/main.css">
+</head>
+
+<body>
+	<nav class="menu large">
+		<ul>
+			<li><a href="home.html" class="menu-links text-center"><strong>Politico</strong></a></li>
+			<li><a href="user_reset.html" class="menu-links text-center">Status</a></li>
+			<li><a href="politics.html" class="menu-links text-center" id='contestElection'>Politics</a></li>
+			<li><a href="user_profile.html" class="menu-links text-center">Profile</a></li>
+			<li><a href="vote.html" class="menu-links text-center">Vote</a></li>
+			<li class="right"><a href="index.html" class="menu-links text-center">Logout</a></li>
+		</ul>
+	</nav>
+	<nav class="menu small">
+		<ul>
+			<li><a href="home.html" class="menu-links text-center"><strong>Politico</strong></a></li>
+			<li class="right"><a href="index.html" class="reduce">Logout</a></li>
+		</ul>
+		<ul class="small-fix">			
+			<li><a href="home.html" class="text-center">Home</a></li>
+			<li><a href="user_reset.html" class="text-center">Status</a></li>
+			<li><a href="politics.html" class=" text-center" id='contestElection'>Politics</a></li>
+			<li><a href="user_profile.html" class="text-center">Profile</a></li>
+			<li><a href="vote.html" class="text-center">Vote</a></li>
+		</ul>
+
+	</nav>
+
+	<div class='body'>
+
+		<main class='flex-length-3 flex-length-move-3 small-down'>
+			<h3 class='text-center'>Reset Password</h3>
+			<div id="dialogBox"></div>
+			<form id='sign_up_form'>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='password' placeholder='Current Password' id='oldPassword' class='control'>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='password' placeholder='Enter a New Password' id='newPassword' class='control'>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='password' placeholder='Confirm New Password' id='confrimNewPassword' class='control'>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<input type='submit' value='Reset Password' id='resetPassword' class='button button_green'>
+				</div>
+			</form>
+			<p class='text-center'><small>Make sure to remember your password</small></p>
+		</main>
+	</div>
+</body>
+
+</html>
