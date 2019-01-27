@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Politico-Politician Intrest in Election</title>
+
+
+	<link rel="stylesheet" type="text/css" href="script/css/main.css">
+</head>
+
+<body>
+	<nav class="menu large">
+		<ul>
+			<li><a href="home.html" class="menu-links text-center"><strong>Politico</strong></a></li>
+			<li><a href="user_reset.html" class="menu-links text-center">Status</a></li>
+			<li><a href="politics.html" class="menu-links text-center" id='contestElection'>Politics</a></li>
+			<li><a href="user_profile.html" class="menu-links text-center">Profile</a></li>
+			<li><a href="vote.html" class="menu-links text-center">Vote</a></li>
+			<li class="right"><a href="index.html" class="menu-links text-center">Logout</a></li>
+		</ul>
+	</nav>
+	<nav class="menu small">
+		<ul>
+			<li><a href="home.html" class="menu-links text-center"><strong>Politico</strong></a></li>
+			<li class="right"><a href="index.html" class="reduce">Logout</a></li>
+		</ul>
+		<ul class="small-fix">			
+			<li><a href="home.html" class="text-center">Home</a></li>
+			<li><a href="user_reset.html" class="text-center">Status</a></li>
+			<li><a href="politics.html" class=" text-center" id='contestElection'>Politics</a></li>
+			<li><a href="user_profile.html" class="text-center">Profile</a></li>
+			<li><a href="vote.html" class="text-center">Vote</a></li>
+		</ul>
+	</nav>
+	<nav class="body">
+		<ul class="flex-length-4 flex-length-move-2 white">
+			<li><a href="politics.html" class="text-center">Aspirants</a></li>
+			<li><a href="candidate_intrest.html" class=" text-center active" id='contestElection'>Run for Election</a></li>
+			<li><a href="politician.html" class="text-center">Enroll as a Politician</a></li>
+		</ul>
+	</nav>
+
+	<div class="body">
+		<main class="accessDenied">
+			<h3>Access Denied</h3>
+		</main>
+		<main class="flex-length-6 flex-length-move-1">
+			<h3 class="text-center">Apply for a Post</h3>
+			<h5 class="text-center">Run as a Candidate of your Party</h5>
+			<hr>
+			<div id="dialogBox"></div>
+			<form id='sign_up_form'>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='text' placeholder='Surname' id='surname' class='control' required>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='text' placeholder='Middlename' id='otherName' class='control' required>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='text' placeholder='Othername' id='otherName' class='control' required >
+					</div>
+
+				</div>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='email' placeholder='Email' id='address' class='control' required >
+					</div>
+				</div>
+				<div class='form_controller'>
+					<div class='full-flex-length'>
+						<input type='tel' placeholder='Phone' id='phone' class='flex-length-6 control'required>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<label class='flex-length-2'>Passport</label>
+					<div class='flex-length-6'>
+						<input type='file' id='passport' class='flex-length-6' id="passport" required>
+					</div>
+				</div>
+				<div class='form_controller'>
+					<label class='flex-length-2'>Party</label>
+					<div class='flex-length-6'>
+						<select class='control'required>
+							<option>Select party</option>
+							<option>APC</option>
+							<option>AC</option>
+							<option>ACN</option>
+							<option>PDP</option>
+						</select>
+					</div>
+
+				</div>
+
+				<div class='form_controller'>
+					<label class='flex-length-2'>Office</label>
+					<div class='flex-length-6'>
+						<select class='control'required>
+							<option>Select Office</option>
+							<option>Local Governor</option>
+							<option>State Governor</option>
+							<option>Presidency</option>
+							<option>Senate</option>
+						</select>
+					</div>
+
+				</div>
+				<div class='form_controller'>
+					<input type='submit' value='Run for an Office' id='signup_button' class='button button_blue'>
+				</div>
+			</form>
+
+			</form>
+		</main>
+	</div>
+
+	<script type="text/javascript" src='../script/js/main.js'></script>
+</body>
+
+</html>
