@@ -27,7 +27,6 @@ body {
 .body::after {
   content: "";
   display:block;
-  height: 50px;
   background-image: url('../images/arms.jpg');
   background-size: 100% 100%;
   opacity: 0.1;
@@ -211,46 +210,35 @@ p {
   text-align: left;
 }
 
-.circle {
-  border-radius: 50%;
-  background-color: #570909;
-  padding-top: 90px;
-  font-size: 20px;
-  font-weight: bolder;
-  background-image: url("../images/flags.png");
-  background-size: 100%;
-  min-height: 25px;
-  width: 50%;
-  border: 1px;
-  margin-left: 25%;
+.pics{
+  width: 40%;
+  height: 70px;
+  float: left;
+  padding-bottom: 7rem;
+  padding-top: 2rem;
 }
 
-.circle1 {
-  border-radius: 50%;
-  background-color: #033503;
-  padding-top: 90px;
-  font-size: 20px;
-  font-weight: bolder;
-  background-image: url("../images/home.png");
-  background-size: 100% 100%;
-  min-height: 25px;
-  width: 50%;
-  border: 1px;
-  margin-left: 25%;
+.hint{
+  width:58%;
+  height: 70px;
+  float: right;
+  padding-bottom: 7rem;
+  padding-top: 2rem;
 }
 
-.circle2 {
-  border-radius: 50%;
-  background-color: #033503;
-  padding-top: 90px;
-  font-size: 20px;
-  font-weight: bolder;
-  background-image: url("../images/list.png");
-  background-size: 100% 100%;
-  min-height: 25px;
-  border: 1px;
-  width: 50%;
-  margin-left: 25%;
+.party-pics{
+  width: 30%;
+  float: left;
+}
+
+.abb{
+  width: 30%;
+  float: left;
+}
+
+.moto{
+  width: 40%;
+  float: left;
 }
 
 .text-right {
