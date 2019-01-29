@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Politico-Reset Password</title>
+	<title>Politico-Homepage</title>
 	<link rel="stylesheet" type="text/css" href="script/css/main.css">
 </head>
 
@@ -15,8 +15,8 @@
 			<li><a href="home.html" class="menu-links text-center"><strong>Politico</strong></a></li>
 			<li><a href="user_reset.html" class="menu-links text-center">Status</a></li>
 			<li><a href="candidate_intrest.html" class="menu-links text-center" id='contestElection'>Politics</a></li>
-			<li><a href="politics.html" class="menu-links text-center">Profile</a></li>
 			<li><a href="vote.html" class="menu-links text-center">Vote</a></li>
+			<li><a href="admin_home.html" class="menu-links text-center">Admin</a></li>
 			<li class="right"><a href="index.html" class="menu-links text-center">Logout</a></li>
 		</ul>
 	</nav>
@@ -29,7 +29,7 @@
 				<li><a href="home.html" class="text-center">Home</a></li>
 				<li><a href="user_reset.html" class="text-center">Status</a></li>
 				<li><a href="politics.html" class=" text-center" id='contestElection'>Politics</a></li>
-				<li><a href="user_profile.html" class="text-center">Profile</a></li>
+				<li><a href="admin_home.html" class="text-center">Admin</a></li>
 				<li><a href="vote.html" class="text-center">Vote</a></li>
 			</ul>
 
@@ -43,13 +43,33 @@
 					<h3>Daniel Hint</h3>
 					<p>Email: Danielhint@mail.com</p>
 					<p>Phone: 09078456458</p>
+					<button type="submit" class="button button_blue">Become Politician</button>
 				</span>
 			</div>
 			<h3 class="text-center">Votes Casted</h3>
 			<hr>
-			<ul id="castedVotes">
-
-			</ul>
+			<table>
+				<tr>
+					<th>Candidate</th>
+					<th class="text-center">Party</th>
+					<th>Office</th>
+				</tr>
+				<tr>
+					<td>Olusegun Babajide</td>
+					<td class="text-center"><img src="./script/images/apc.jpg" alt="APC" height="45rem" width="45rem"></td>
+					<td>Senate</td>
+				</tr>
+				<tr>
+					<td>Muhammed taraba</td>
+					<td class="text-center"><img src="./script/images/pdp.jpg" alt="PDP" height="45rem" width="45rem"></td>
+					<td>President</td>
+				</tr>
+				<tr>
+					<td>Chuks Obimo</td>
+					<td class="text-center"><img src="./script/images/apga.jpg" alt="APGA" height="45rem" width="45rem"></td>
+					<td>State Governor</td>
+				</tr>
+			</table>
 		</main>
 	</div>
 
