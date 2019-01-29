@@ -171,18 +171,49 @@ p {
     margin-left: 25%;
     background-color: #033503;
   }
+  .forget{    
+    margin-left: 14rem;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(16, 58, 3, 0.719);
+    border: 3px solid rgba(16, 58, 3, 0.719);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .8rem;
+    border-radius: .3rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    margin-bottom: .8rem;
+    transition: 0.3s;
+    max-width: 22%;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(16, 58, 3, 0.719);
+    border: 1.3px solid rgba(16, 58, 3, 0.719);
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
 }
 
 .control {
   display: flex;
   flex-wrap: wrap;
   width: 95%;
-  padding: .35rem;
+  padding: .2rem;
   font-size: 1rem;
-  line-height: 3;
+  line-height: 2.5;
   color: #495057;
   background-color: #ffffff;
   border: 1px solid #ced4da;
+  border-radius: .2rem;
+}
+
+.forget{
+  margin-left: 8rem;
 }
 
 .form_controller {
@@ -306,16 +337,34 @@ p {
   background-color: #033503;
 }
 
+tr:nth-child(even) {
+  background-color: #797474;
+  color: #ffffff;
+}
+
+td{
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  padding-left: .2rem;
+  border: collapse;
+}
+
+th{
+  padding-left: .2rem;
+}
+
+table {
+  width:100%;
+}
+
 /* buttons*/
 
 .button {
   position: relative;
   min-height: .2rem;
-  padding: .89rem;
-  border-radius: .4rem;
+  padding: .3rem;
+  border-radius: .2rem;
   border: .2rem;
-  margin-top: 15px;
-  margin-left: 100px;
 }
 
 .button_blue {
@@ -342,13 +391,13 @@ p {
 
 .button_blue:hover {
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #120a3f;
+  border-color: #120a3f;
 }
 
 .button_green:hover {
   color: #fff;
-  background-color: #10df10;
+  background-color: #398439;
   border-color: #398439;
 }
 
@@ -372,15 +421,14 @@ a:hover {
 }
 
 .menu-links:hover, .small-fix>li>a:hover, .white>li>a:hover, .reduce:hover {
-  color: #cccccc;
+  color: #033503;
   text-decoration: none;
-  background-color: #13dd13;
+  background-color: #ffffff;
 }
 
 .admin-links {
   color: #033503;
   text-decoration: none;
-  background-image: url("../images/chevron-circle-left.png");
   background-size: 100% 100%;
 }
 
@@ -459,4 +507,27 @@ a:hover {
   top: 95vh;
   color: #ffffff;
   position: absolute;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(16, 58, 3, 0.719);
+  border: 3px solid rgba(16, 58, 3, 0.719);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .8rem;
+  border-radius: .3rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  margin-bottom: .8rem;
+  transition: 0.3s;
+  width: 70%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(16, 58, 3, 0.719);
+  border: 1.3px solid rgba(16, 58, 3, 0.719);
+}
+
+.container {
+  padding: 2px 8px;
 }
