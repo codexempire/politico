@@ -213,7 +213,8 @@ p {
 }
 
 .forget{
-  margin-left: 8rem;
+  margin-left: 50%;
+  font-size: .8rem;
 }
 
 .form_controller {
