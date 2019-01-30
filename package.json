@@ -1,0 +1,45 @@
+{
+  "name": "politico",
+  "version": "1.0.0",
+  "description": "A political app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js",
+    "start": "nodemon --exec babel-node app.js"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "mocha"
+    ],
+    "rules": {
+      "mocha/no-exclusive-tests": "error"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codexempire/politico.git"
+  },
+  "author": "Princewill Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codexempire/politico/issues"
+  },
+  "homepage": "https://github.com/codexempire/politico#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-mocha": "^5.2.1"
+  }
+}
