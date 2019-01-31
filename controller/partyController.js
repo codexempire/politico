@@ -15,10 +15,7 @@ class PartyController {
       const id = PartyModel.createParty(name, hqAddress, logoUrl);
       res.status(201).json({
         status: 201,
-        data: [{
-            id,
-            name,
-        }],
+        data: [id, name,],
       });
     }
   }

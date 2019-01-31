@@ -11,7 +11,7 @@ class PartyModel {
 
     party.push(parties);
 
-    return parties.id;
+    return parties;
   }
 }
 

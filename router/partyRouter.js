@@ -4,6 +4,6 @@ import PartyController from '../controller/partyController';
 
 const partyRouter = express.Router();
 
-partyRouter.get('/party', PartyController.getAllParty);
+partyRouter.post('/party', PartyController.createParty);
 
 export default partyRouter;
