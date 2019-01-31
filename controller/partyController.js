@@ -6,7 +6,7 @@ class PartyController {
 
     res.status(200).json({
       status: 200,
-      data: parties.map(party => ({ id: party.id, name: party.name, logoUrl: party.logoUrl })),
+      data: parties.map(party => ({ id: party.id, name: party.name, hqAddress: party.hqAddress, logoUrl: party.logoUrl })),
     });
   }
 }
