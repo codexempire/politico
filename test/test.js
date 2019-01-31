@@ -25,24 +25,24 @@ describe('GET /party/1', () => {
 
 
 describe('POST /party', () => {
-  it('Create a Political Party', (done) => {
+  it('Create Party', (done) => {
     request(app)
-      .post()
+      .post('/api/v1/party')
       .send({
         name: 'name',
-        hqAddress: 'hqAddress',
-        logoUrl: 'logoUrl',
+        hqAddress: 'address',
+        logoUrl: 'logo',
       })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, done);
+      .expect(201, done);
   });
 });
 
 describe('PATCH /party/name', () => {
   it('edit the name of a specific political party', (done) => {
     request(app)
-      .patch('/api/v1/parties/name')
+      .patch('/api/v1/party/name')
       .send({
         name: 'name',
       })
@@ -55,7 +55,7 @@ describe('PATCH /party/name', () => {
 describe('DELETE /party/1', () => {
   it('delete a specific political party', (done) => {
     request(app)
-      .delete('/api/v1/parties/1')
+      .delete('/api/v1/party/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done);
@@ -75,7 +75,7 @@ describe('GET /office/1', () => {
 describe('GET /office', () => {
   it('Fetch all offices', (done) => {
     request(app)
-      .get('/api/v1/office/1')
+      .get('/api/v1/office')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done);
@@ -92,6 +92,6 @@ describe('POST /office', () => {
       })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, done);
+      .expect(201, done);
   });
 });
