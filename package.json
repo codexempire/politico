@@ -4,7 +4,7 @@
   "description": "A political app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*.js",
+    "test": "mocha --require babel-polyfill --require babel-register",
     "start": "nodemon --exec babel-node app.js"
   },
   "eslintConfig": {
