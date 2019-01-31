@@ -1,10 +1,10 @@
 import PartyModel from '../model/partyModel';
-import PartyMiddleware from '../middleware/partyMiddleware'
+import PartyMiddleware from '../middleware/partyMiddleware';
 
 class PartyController {
   static createParty(req, res) {
     PartyMiddleware.createPartyCheck(req);
-    
+
     if (req.error) {
       res.status(404).json({
         status: 404,
@@ -18,6 +18,14 @@ class PartyController {
         data: [party],
       });
     }
+  }
+  static getAllParty(req, res) {
+    const parties = PartyModel.getAllParty(res);
+
+    res.status(200).json({
+      status: 200,
+      data: parties,
+    });
   }
 }
   
