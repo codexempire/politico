@@ -12,10 +12,10 @@ class PartyController {
       });
     } else {
       const { name, hqAddress, logoUrl } = req.body;
-      const id = PartyModel.createParty(name, hqAddress, logoUrl);
+      const party = PartyModel.createParty(name, hqAddress, logoUrl);
       res.status(201).json({
         status: 201,
-        data: [id],
+        data: [party],
       });
     }
   }
