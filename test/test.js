@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import app from '../app';
 
 
-describe('GET /party/',() => {
+describe('GET /party',() => {
   it('respond with a status code 200', (done) => {
     request(app)
       .get('/api/v1/party')
