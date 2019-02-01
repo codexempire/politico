@@ -4,7 +4,7 @@ import { expect } from 'chai';
 
 import app from '../app';
 
-describe('POST /party', () => {
+describe('POST /party',() => {
   it('respond with status 201 and json containing the newly created party', (done) => {
     request(app)
       .post('/api/v1/party')

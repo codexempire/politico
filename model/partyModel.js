@@ -11,7 +11,17 @@ class PartyModel {
 
     party.push(parties);
 
-    return parties;
+    return party;
+  }
+  static getAllParty(res) {
+    if (!party.length) {
+      res.status(404).json({
+        status: 404,
+        message: 'No party Available',
+      });
+    }
+
+    return party;
   }
 }
 
