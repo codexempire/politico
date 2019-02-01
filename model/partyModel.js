@@ -2,25 +2,19 @@ import party from './datastore/partyDB';
 
 class PartyModel {
   static createParty(name, hqAddress, logoUrl) {
-    const parties = {
+    const oneParty = {
       id: party.length + 1,
       name,
       hqAddress,
       logoUrl,
     };
 
-    party.push(parties);
+    party.push(oneParty);
 
-    return party;
+    return oneParty;
   }
-  static getAllParty(res) {
-    if (!party.length) {
-      res.status(404).json({
-        status: 404,
-        message: 'No party Available',
-      });
-    }
 
+  static getAllParty() {
     return party;
   }
 }
