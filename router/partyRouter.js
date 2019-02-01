@@ -6,6 +6,9 @@ const partyRouter = express.Router();
 
 // post router for create party
 partyRouter.post('/party', PartyController.createParty);
+
+// create get all party get route
 partyRouter.get('/party', PartyController.getAllParty);
 
 export default partyRouter;
+
