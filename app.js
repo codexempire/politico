@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
-import partyRouter from './router/partyRouter';
+import partyRouter from './router/partyRouter'
 
 const app = express();
 const PORT = 3000;

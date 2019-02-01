@@ -45,14 +45,20 @@ describe('GET /party', () => {
       .expect(200, done);
   });
 
-  it('respond with an array of object', (done) => {
+  it('response should have a party object with the name property and should be an Array', (done) => {
     request(app)
-      .get('/api/v1/party')
+      .post('/api/v1/party')
+      .send({
+        name: 'name',
+        hqAddress: 'address',
+        logoUrl: 'logo',
+      })
       .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
       .end((err, res) => {
+        expect(res.body.data[0]).to.have.property('name');
         expect(res.body.data).to.be.a('Array');
         done(err);
       });
   });
+});
 });
