@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api/v1', partyRouter);
 
 app.listen(process.env.PORT || PORT, (err) => {
-  if (err) console.log(err);
+  if (err) throw err;
   console.log(`Running on port ${PORT}`);
 });
 

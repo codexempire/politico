@@ -1,0 +1,4 @@
+language: node_js
+rvm:
+  - "stable"
+after_success: npm run coverage
