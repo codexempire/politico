@@ -5,13 +5,13 @@ class PartyMiddleware {
   	if (!req.body.hqAddress || req.body.hqAddress.trim() == '' || req.body.hqAddress.length < 12) res.status(400).json({ status: 400, message: 'Enter a valid hqAddress' });
   	const valid = /^(ftp|http|https):\/\/[^ "]+$/.test(req.body.logoUrl);
   	if (!req.body.logoUrl || req.body.logoUrl.trim() == '' || !valid) res.status(400).json({ status: 400, message: 'Enter a valid logo url' });
-  	return true;
+  	return null;
   }
 
   // patch middleware
-  static patch(req) {
-  	if (!req.body.name || req.body.name.length < 3) return true;
-  	return false;
+  static patch(req, res) {
+		if (!req.body.name || req.body.name.length < 3) res.status(400).json({ status: 400, message: 'Enter a valid name of at least 3 letters' });
+  	return null;
   }
 }
 export default PartyMiddleware;

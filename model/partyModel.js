@@ -1,45 +1,108 @@
 import party from './datastore/partyDB';
+import pool from './db_connection';
 
 class PartyModel {
-  static createParty(info, res) {
-    const exists = party.find(part => part.name === info.name.toUpperCase());
-    if (exists) {
-      res.status(406).json({ status: 406, message: 'Party with this name already exists' });
-    } else {
-      const newParty = {
-        id: party.length + 1,
-        name: info.name.toUpperCase(),
-        hqAddress: info.hqAddress,
-        logoUrl: info.logoUrl
-      };
-      party.push(newParty);
-      res.status(201).json({ status: 201, data: [newParty] });
-    }
+  static createParty(req, res) {
+    const { name, hqAddress, logoUrl } = req.body;
+    const text = 'INSERT INTO parties (name, hqAddress, logoUrl) VALUES ($1, $2, $3)';
+    const values = [name, hqAddress, logoUrl];
+
+    pool
+      .query(text, values)
+      .then(result => result.json())
+      .then(val => {
+        res.status(201).json({
+          status: 201,
+          data: val
+        });
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 500,
+          message: err
+        });
+      });
   }
 
-  static getAllParty() {
-    return party;
+  static getAllParty(res) {
+    const text = 'SELECT * FROM parties';
+    pool
+      .query(text)
+      .then(result => result.json())
+      .then(value => {
+        res.status(200).json({
+          status: 200,
+          data: value
+        });
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 500,
+          message: err
+        });
+      });
   }
 
-  static getOne(id) {
-    const  found = party.find(part => part.id === id);
-    if (!found) return false;
-    return found;
+  static getOne(id, res) {
+    const text = 'SELECT * FROM parties WHERE id = $1';
+    const val = [id];
+
+    pool
+      .query(text, val)
+      .then(result => { result.json(); })
+      .then(value => {
+        res.status(200).json({
+          status: 200,
+          data: value
+        });
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 500,
+          message: err
+        });
+      });
   }
 
-  static deleteParty(id) {
-    const found = party.find(part => part.id === id);
-    if (!found) return false;
-    const index = party.indexOf(found);
-    party.splice(index, 1);
-    return found;
+  static deleteParty(id, res) {
+    const text = 'DELETE * FROM parties WHERE id = $1';
+    const val = [id];
+
+    pool
+      .query(text, val)
+      .then(result => { result.json(); })
+      .then(value => {
+        res.status(200).json({
+          status: 200,
+          data: value
+        });
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 500,
+          message: err
+        });
+      });
   }
 
-  static patchParty(id, name) {
-    const found = party.find(part => part.id === id);
-    if (!found) return false;
-    found.name = name;
-    return found;
+  static patchParty(id, name, res) {
+    const text = 'UPDATE parties SET name = $1 WHERE id = $2';
+    const val = [id, name];
+    pool
+      .query(text, val)
+      .then(result => result.json())
+      .then(value => {
+        res.status(200).json({
+          status: 200,
+          data: value
+        });
+      })
+      .catch(err => {
+        res.status(500).json({
+          status: 500,
+          message: err
+        });
+      });
   }
 }
 
